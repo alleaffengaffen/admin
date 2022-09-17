@@ -8,10 +8,10 @@ I just let you know that this admin k8s cluster uses a single master node. Here 
 | --- | ----- |
 | Provider | Hetzner |
 | Location | Helsinki (eu-central) |
-| OS | Ubuntu 22.04 | 
-| Type | CX21 | 
+| OS | Ubuntu 22.04 |
+| Type | CX21 |
 | Backups | true |
-| Userdata | see https://wiki.technat.ch/Linux/cloud_init.html | 
+| Userdata | see https://wiki.technat.ch/Linux/cloud_init.html |
 | IPv4 | 65.21.253.236 |
 | IPv6 | 2a01:4f9:c012:57c6::/64 |
-| DNS | admin.technat.ch |
+| DNS | admin.alleaffengaffen.ch |
