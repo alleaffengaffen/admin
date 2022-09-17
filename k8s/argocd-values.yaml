@@ -27,13 +27,12 @@ server:
     secretName: argocd-server-tls
 
   service:
-    annotations: {}
     type: NodePort
-    nodePortHttp: 30080
-    nodePortHttps: 30443
+    externalIPs:
+    - "65.21.253.236"
 
   config:
-    url: "https://admin.alleaffengaffen.ch:30443"
+    url: "https://admin.alleaffengaffen.ch"
     server.rbac.log.enforce.enable: "true"
     exec.enabled: "true"
     admin.enabled: "true"

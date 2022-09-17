@@ -15,6 +15,9 @@ encryption:
 operator:
   replicas: 1
 
+ingressController:
+  enabled: true
+
 l7Proxy: false
 
 hubble:
@@ -24,11 +27,6 @@ hubble:
   ui:
     enabled: true
     rollOutPods: true
-
-ipam:
-  mode: "cluster-pool"
-  operator:
-    clusterPoolIPv4PodCIDR: "10.111.0.0/12"
 
 policyEnforcementMode: "none"
 
