@@ -13,6 +13,12 @@ Was installed regurarly as so:
 clusterctl init
 ```
 
+### Infrastructure Providers
+
+#### AWS
+
+IAM roles installed using `clusterawsadm` and the provider using the CLI.
+
 ## Cert-Manager
 
 Comes with CAPI, only the issuers were installed after on.
