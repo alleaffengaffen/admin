@@ -26,6 +26,10 @@ Installed using the community Helm chart, see the [argocd-values.yaml](./argocd-
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
 helm upgrade -i argocd argo/argo-cd -n argocd -f argocd-values.yaml
-``
+```
 
 The Argo CD instance can be rechached at [https://admin.alleaffengaffen.ch:30443](https://admin.alleaffengaffen.ch:30443).
+
+## Clusters
+
+Apply the `clusters.yaml` manifest in the `argocd` namespace to configure the cluster of clusters app.

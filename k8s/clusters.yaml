@@ -1,0 +1,11 @@
+project: default
+source:
+  repoURL: 'https://github.com/alleaffengaffen/clusters.git'
+  path: .
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: clusters
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
