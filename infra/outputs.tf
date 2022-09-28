@@ -14,16 +14,16 @@ output "ipv6_network" {
 }
 
 output "ansible_user" {
-  value = var.ansible_user
+  value       = var.ansible_user
   description = "User for ansible to configure the system"
 }
 
 output "ansible_ssh_key" {
-  value = var.ansible_ssh_key
+  value       = var.ansible_ssh_key
   description = "Public SSH key for ansible user"
 }
 
 output "ansible_ssh_port" {
-  value = var.ansible_ssh_port
+  value       = var.ansible_ssh_port
   description = "SSH port for Cloud server"
 }

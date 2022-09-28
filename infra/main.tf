@@ -22,7 +22,7 @@ resource "hcloud_server" "admin" {
   labels = {
     "created-by"    = "terraform"
     "configured-by" = "ansible"
-    "k8s-admin" = "true"
+    "k8s-admin"     = "true"
   }
 }
 
@@ -44,7 +44,7 @@ resource "hcloud_firewall" "admin" {
     // Kube-api
     direction = "in"
     protocol  = "tcp"
-    port = "6443"
+    port      = "6443"
     source_ips = [
       "0.0.0.0/0",
       "::/0"
@@ -54,7 +54,7 @@ resource "hcloud_firewall" "admin" {
     // SSH
     direction = "in"
     protocol  = "tcp"
-    port = var.ansible_ssh_port
+    port      = var.ansible_ssh_port
     source_ips = [
       "0.0.0.0/0",
       "::/0"
@@ -64,7 +64,7 @@ resource "hcloud_firewall" "admin" {
     // ETCD
     direction = "in"
     protocol  = "tcp"
-    port = "2379-2380"
+    port      = "2379-2380"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
@@ -73,7 +73,7 @@ resource "hcloud_firewall" "admin" {
   rule {
     direction = "in"
     protocol  = "tcp"
-    port = "10250"
+    port      = "10250"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
@@ -100,7 +100,7 @@ resource "hcloud_firewall" "admin" {
   rule {
     direction = "in"
     protocol  = "tcp"
-    port = "4240"
+    port      = "4240"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
@@ -109,7 +109,7 @@ resource "hcloud_firewall" "admin" {
   rule {
     direction = "in"
     protocol  = "udp"
-    port = "8472"
+    port      = "8472"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
@@ -118,7 +118,7 @@ resource "hcloud_firewall" "admin" {
   rule {
     direction = "in"
     protocol  = "udp"
-    port = "51871"
+    port      = "51871"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
@@ -127,7 +127,7 @@ resource "hcloud_firewall" "admin" {
   rule {
     direction = "in"
     protocol  = "tcp"
-    port = "80"
+    port      = "80"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
@@ -136,7 +136,7 @@ resource "hcloud_firewall" "admin" {
   rule {
     direction = "in"
     protocol  = "tcp"
-    port = "443"
+    port      = "443"
     source_ips = [
       join("", [hcloud_server.admin.ipv4_address, "/32"])
     ]
