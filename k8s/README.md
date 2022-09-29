@@ -28,6 +28,16 @@ Some notes:
 
 The yubikey was added as SSH key to the dashboard of eu-west-2 manually.
 
+#### Azure
+
+This [quickstart](https://capz.sigs.k8s.io/topics/getting-started.html) show the prerequisites that are required to initialize the Azure provider. If this is done, use the [capi quickstart](https://cluster-api.sigs.k8s.io/user/quick-start.html) to install the provider and bootstrap a cluster.
+
+Some notes:
+- SP named `capi`
+- Secrets was created in the `capz-system` namespace (not the default namespace)
+- `switzerlandnorth` was set as region during the installation
+- Subscription `a210a168-17ad-4129-81f5-09a57612bab3` is registered on the controller for privisoning
+
 ## Cert-Manager
 
 Comes with CAPI, only the issuers were installed after on.
